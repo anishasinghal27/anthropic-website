@@ -365,6 +365,75 @@
 #home .dot::after{left:3px; top:4px;}
 #home .body{grid-area:body;}
 }
+
+  /* ── Neerav letter: reasons, Venn, writing cards ── */
+  #home .letter strong, #home .closing strong{font-weight:700; color:var(--forest);}
+  #home .reason{margin-top:76px;}
+  #home .reason-head{display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:baseline; margin-bottom:16px;}
+  #home .reason-num{font-family:var(--display); font-size:3.4rem; line-height:.8; color:var(--marigold);}
+  #home .reason .letter p{margin-bottom:1em;}
+  #home .r1-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:28px; align-items:start;}
+  #home .r1-grid .panel h3{font-size:1rem;}
+  #home .venn-wrap{display:grid; grid-template-columns:1.5fr 1fr; gap:26px; align-items:center; margin-top:18px;}
+  #home .venn{width:100%; height:auto; overflow:visible;}
+  #home .venn circle{stroke:var(--forest); stroke-width:1.5;}
+  #home .c-pol{fill:rgba(31,59,45,.10);} #home .c-fin{fill:rgba(217,162,60,.16);} #home .c-ai{fill:rgba(107,143,122,.16);}
+  #home .c-core{fill:var(--forest); stroke:none !important;}
+  #home .core-label{font-family:var(--serif); font-weight:700; font-size:14px; fill:var(--on-dark);}
+  #home .c-label{font-family:var(--sans); font-weight:700; font-size:17px; fill:var(--forest);}
+  #home .role{cursor:pointer; outline:none;}
+  #home .role text{font-family:var(--sans); font-size:15px; font-weight:600; fill:var(--ink); transition:fill .15s;}
+  #home .role:hover text, #home .role:focus-visible text, #home .role.on text{fill:var(--marigold-deep); text-decoration:underline;}
+  #home .venn-detail{background:var(--sage); border-left:3px solid var(--forest); padding:22px 24px; min-height:160px;}
+  #home .vd-name{font-family:var(--serif); font-weight:700; font-size:1.06rem; color:var(--forest); margin-bottom:6px;}
+  #home .vd-text{font-size:.93rem; line-height:1.6; color:var(--ink-2);}
+  #home .pieces{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px;}
+  #home .piece{display:flex; flex-direction:column; padding:20px; background:var(--sage); border:1px solid var(--rule); cursor:pointer; transition:background .2s, border-color .2s;}
+  #home .piece-kicker{font-size:.78rem; font-weight:600; color:var(--marigold-deep);}
+  #home .piece-pull{font-family:var(--display); font-size:1.75rem; line-height:1.1; color:var(--forest); margin:10px 0 6px;}
+  #home .piece-sub{font-size:.84rem; line-height:1.45; color:var(--muted); margin-bottom:16px;}
+  #home .piece-title{margin-top:auto; padding-top:12px; border-top:1px solid var(--rule); font-family:var(--serif); font-weight:700; font-size:.95rem; color:var(--ink);}
+  #home .piece:hover, #home .piece:focus-visible{background:var(--forest); border-color:var(--forest);}
+  #home .piece:hover .piece-pull, #home .piece:hover .piece-title, #home .piece:focus-visible .piece-pull, #home .piece:focus-visible .piece-title{color:var(--on-dark);}
+  #home .piece:hover .piece-sub, #home .piece:focus-visible .piece-sub{color:var(--on-dark-2);}
+  #home .piece:hover .piece-kicker, #home .piece:focus-visible .piece-kicker{color:var(--marigold);}
+  #home .piece:hover .piece-title{border-color:var(--forest-line);}
+  #home .closing{margin-top:72px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);}
+  @media(max-width:900px){ #home .pieces{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:760px){
+    #home .r1-grid, #home .venn-wrap{grid-template-columns:1fr;}
+    #home .role text{font-size:16px;} #home .c-label{font-size:19px;}
+    #home .reason-num{font-size:2.6rem;}
+  }
+  @media(max-width:520px){ #home .pieces{grid-template-columns:1fr;} }
+
+  #home .venn-detail{min-height:250px;}
+  #home .vd-hint{font-size:.78rem; font-weight:600; color:var(--marigold-deep); margin-bottom:8px;}
+  #home .vd-meta{font-size:.82rem; font-weight:600; color:var(--muted); margin-bottom:8px;}
+  #home .vd-carry{margin-top:12px; padding:9px 12px; background:var(--bone); border-left:3px solid var(--marigold); font-size:.9rem; line-height:1.5; color:var(--ink-2);}
+  #home .vd-carry b{color:var(--forest); font-weight:600;}
+
+  /* Venn v3: full-width diagram, prominent section titles */
+  #home .venn-wrap{grid-template-columns:1fr !important; gap:18px;}
+  #home .venn{max-width:680px; margin:0 auto; display:block;}
+  #home .c-label{font-family:var(--display) !important; font-weight:400 !important; font-size:34px !important; fill:var(--forest) !important;}
+  #home .core-label{font-size:15px !important;}
+  #home .role text{font-size:16px;}
+  #home .c-pol{fill:rgba(31,59,45,.13);} #home .c-fin{fill:rgba(217,162,60,.22);} #home .c-ai{fill:rgba(107,143,122,.22);}
+  #home .venn circle{stroke-width:2;}
+  #home .venn-detail{min-height:0;}
+  @media(max-width:760px){ #home .role text{font-size:16px;} #home .c-label{font-size:40px !important;} }
+
+  /* Canaries chart: labels above bars so "Stable or growing" has room */
+  #home .r1-grid .bar-row{grid-template-columns:1fr; gap:4px; margin-bottom:14px;}
+  #home .r1-grid .bar-row > span{font-weight:600;}
+  #home .r1-grid .bar-track::after{left:40%;}
+  #home .r1-grid .bar.drop{right:60%; width:36%;}
+  #home .r1-grid .bar.flat{left:40%;}
+  #home .r1-grid .zero{margin-left:0;}
+  #home .r1-grid .zero span{left:40%;}
+  @media(max-width:900px){ #home .r1-grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -393,7 +462,7 @@
   <section class="page show" id="home">
 <header class="hero">
   <div class="hero-inner">
-    <p class="for">For the Strategic Initiatives team</p>
+    <p class="for">A letter to Neerav Kingsland</p>
     <h1 class="name">Anisha Singhal</h1>
   </div>
 </header>
@@ -401,128 +470,85 @@
 <div class="sheet">
 
   <div class="letter">
-    <p>Dear Strategic Initiatives Team,</p>
-    <p>I am a senior at Dartmouth studying Economics and Public Policy and a Research Intern in Economic Studies at the Brookings Institution this fall. I recently heard Neerav Kingsland talk at Brookings and was fascinated by the work your team is doing. But rather than tell you why I want to join, I want to show what I would add: a view from inside the two places AI is changing fastest, breadth across the sectors your work touches, and a habit of exploring new ways of thinking.</p>
+    <p>Hi Neerav,</p>
+    <p>After <strong>your talk at Brookings</strong> last week, I asked you about your view that education's mission is to make students good people and to prepare them for their careers, and that in the age of AI the former will become more important. I am writing an article on a related phenomenon I observed in education: as children we are taught to be good and smart, but as adults we learn that the capitalist system primarily rewards being smart and being good can get in the way. My instinct was the opposite of yours, since if AI shifts more of the economy's rewards to capital and jobs become scarcer, I expected students to compete even harder on career preparation.</p>
+    <p>When I asked you why you think the emphasis on being good will grow, we had a thoughtful exchange about the comparative advantage of good governance, derived from good voter virtue, in a world of AI agents. You mentioned that your thoughts here are speculative and it would take time to think through these things. I would love to help with that process.</p>
   </div>
 
   <section aria-labelledby="fit-h">
-    <h2 id="fit-h">Where the team is strong, and what I'd add</h2>
-    <div class="fit" role="table" aria-label="Team strengths and how I complement them">
-      <div class="fit-head team" role="columnheader">Where the team is strong</div>
+    <h2 id="fit-h">Three reasons to hire me</h2>
+    <div class="fit" role="table" aria-label="Your team's strengths and what I would add">
+      <div class="fit-head team" role="columnheader">Where your team is strong</div>
       <div class="fit-head me" role="columnheader">What I'd add</div>
-
-      <div class="cell team" role="cell"><strong>Depth</strong><p>Expertise built over years in fields like education, policy, and business.</p></div>
-      <div class="cell me" role="cell"><strong>Breadth</strong><p>Ten roles across five sectors, from think tanks and government to banking, venture, consulting, and an AI startup.</p></div>
-
       <div class="cell team" role="cell"><strong>Judgment</strong><p>Experience leading institutions through earlier waves of change.</p></div>
-      <div class="cell me" role="cell"><strong>Proximity</strong><p>A view from inside the current wave, as a student and a new-grad candidate in the two places AI is hitting fastest.</p></div>
-
+      <div class="cell me" role="cell"><strong>1. Proximity to areas AI is hitting the hardest</strong><p>I'm a senior watching AI change how my students learn and am watching a shift in my peers' career pursuits in response to the changing new grad job market.</p></div>
+      <div class="cell team" role="cell"><strong>Depth</strong><p>Expertise built over years in fields like education, policy, and business.</p></div>
+      <div class="cell me" role="cell"><strong>2. Breadth</strong><p>My goal in college has been to better understand how the world works, which led me to seek a breadth of work experiences. I've worked in ten roles across policy, finance, and tech in the past four years.</p></div>
       <div class="cell team" role="cell"><strong>Strategy</strong><p>Setting direction and building partnerships at the highest levels.</p></div>
-      <div class="cell me" role="cell"><strong>New lenses</strong><p>On my Substack, <a href="https://anishasinghal.substack.com/" target="_blank" rel="noopener">Inspired by Economics</a>, I apply economic frameworks to unexpected places, from Rumsfeld's unknown unknowns as a map of AI's progress to Harry Potter as a way into AI alignment.</p></div>
+      <div class="cell me" role="cell"><strong>3. New perspectives</strong><p>I use economics to look at AI from unexpected angles, from Rumsfeld's unknown unknowns as a map of AI's progress to Harry Potter quotes as a guide to AI alignment.</p></div>
     </div>
   </section>
 
-  <section aria-labelledby="prox-h">
-    <h2 id="prox-h">I'm standing where AI is moving fastest</h2>
-    <p class="sub">Two parts of the economy feel AI's effects first, and I am in both of them right now.</p>
-    <div class="prox">
-      <div class="panel">
-        <h3>The classroom</h3>
-        <p>Claude can now complete many of the assignments colleges have long used to build and measure skill, so students and professors are writing new rules for learning in real time.</p>
-        <!-- ADD YOUR OWN OBSERVATION HERE: one specific thing you've seen at Dartmouth (a course that changed its assignments, how classmates actually use AI). It's the strongest line on the page once it's there. -->
+  <section class="reason" aria-labelledby="r1-h">
+    <div class="reason-head"><span class="reason-num">1</span><h2 id="r1-h">Proximity to areas AI is hitting the hardest</h2></div>
+    <div class="r1-grid">
+      <div class="letter">
+        <p>I went to <strong>Stuyvesant High School</strong> in New York and am now a senior studying <strong>Economics and Public Policy at Dartmouth</strong>, graduating in <strong>June 2027</strong>. In my classes, Claude can now do much of the work professors have used for years to teach and test us, and this fall my friends and I are applying for the entry-level jobs that the research shows are shrinking fastest. I've watched many peers changing their career aspirations in response to AI's impact on tech, finance, and consulting.</p>
+        <p>I have been rethinking my objectives as well. Rather than betting on a single role whose skills may not last, I have been building breadth and choosing to work on problems and ideas I care about. I have written about this perspective in my essay on working for a product rather than a role.</p>
       </div>
       <div class="panel">
-        <h3>The new-grad job market</h3>
-        <p>I am recruiting for entry-level roles this cycle, which is exactly where AI's labor effects are showing up first.</p>
-        <div class="bars" role="img" aria-label="Relative employment change in the most AI-exposed occupations: workers aged 22 to 25 declined about 13 percent, while older workers were stable or grew.">
+        <h3>Where AI's labor effects show up first</h3>
+        <div class="bars" role="img" aria-label="Relative employment change in the most AI-exposed occupations since late 2022: workers aged 22 to 25 declined 13 percent, while more experienced workers in the same occupations stayed stable or grew.">
           <div class="bar-row"><span>Ages 22–25</span><div class="bar-track"><div class="bar drop">−13%</div></div></div>
-          <div class="bar-row"><span>Older workers</span><div class="bar-track"><div class="bar flat"><span>No decline</span></div></div></div>
+          <div class="bar-row"><span>More experienced</span><div class="bar-track"><div class="bar flat"><span>Stable or growing</span></div></div></div>
           <div class="zero"><span>0</span></div>
         </div>
-        <p class="src">Employment in the most AI-exposed occupations. Brynjolfsson, Chandar &amp; Chen (2025).</p>
+        <p class="src">Relative employment change since late 2022 in the most AI-exposed occupations, controlling for firm-level shocks. Brynjolfsson, Chandar &amp; Chen (2025), "Canaries in the Coal Mine?"</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="tl-h">
-    <h2 id="tl-h">Ten roles, and what each one brings to the team</h2>
-    <p class="sub">Choose a sector to see where each part of my background comes from.</p>
-    <div class="chips" role="group" aria-label="Filter roles by sector">
-      <button class="chip" data-f="all" aria-pressed="true">All sectors</button>
-      <button class="chip" data-f="policy" aria-pressed="false">Policy and government</button>
-      <button class="chip" data-f="ai" aria-pressed="false">AI</button>
-      <button class="chip" data-f="finance" aria-pressed="false">Finance</button>
-      <button class="chip" data-f="research" aria-pressed="false">Research and consulting</button>
-      <button class="chip" data-f="education" aria-pressed="false">Education and nonprofit</button>
+  <section class="reason" aria-labelledby="r2-h">
+    <div class="reason-head"><span class="reason-num">2</span><h2 id="r2-h">My work spans the intersections of policy, finance, and AI</h2></div>
+    <div class="letter"><p>Over the past five years, I have worked across <strong>policy and research</strong>, <strong>finance</strong>, and <strong>AI</strong>, often in roles that sat in two of those worlds at once. All those fields converge at Anthropic.</p></div>
+    <div class="venn-wrap">
+      <svg class="venn" viewBox="-40 -77 679 750" role="group" aria-label="Venn diagram of my work across Policy and Research, Finance, and AI and Tech, with Anthropic at the center">
+          <circle cx="192.5" cy="205" r="220" class="c-pol"/>
+          <circle cx="407.5" cy="205" r="220" class="c-fin"/>
+          <circle cx="300" cy="391.2" r="220" class="c-ai"/>
+          <text x="-19.5" y="-33" class="c-label" text-anchor="start">Policy &amp; Research</text>
+          <text x="619.5" y="-33" class="c-label" text-anchor="end">Finance</text>
+          <text x="300" y="657" class="c-label" text-anchor="middle">AI &amp; Tech</text>
+          <circle cx="300" cy="268" r="50" class="c-core"/>
+          <text x="300" y="273" class="core-label" text-anchor="middle">Anthropic</text>
+          <g class="role" tabindex="0" role="button" data-region="A" data-name="New York City Housing Department" data-when="Fall 2024" data-tag="Government" data-did="Designed a lender screening tool for the city&#x27;s $82M down payment assistance program and operationalized new tax policy." data-carry="Turning policy into operations inside a public agency."><text x="92" y="130.0" text-anchor="middle"><tspan x="92" dy="0">New York City</tspan><tspan x="92" dy="18">Housing Department</tspan></text></g><g class="role" tabindex="0" role="button" data-region="A" data-name="Dartmouth Economics Department" data-when="2024–25" data-tag="Academic research" data-did="Analyzed global child labor data in Stata for Professor Eric Edmonds and synthesized findings across 2,000+ studies." data-carry="Evidence on how education policy changes outcomes for kids."><text x="92" y="182.0" text-anchor="middle"><tspan x="92" dy="0">Econ research</tspan></text></g><g class="role" tabindex="0" role="button" data-region="A" data-name="Launch Girls" data-when="Summer 2024" data-tag="Nonprofit" data-did="Designed a financial literacy curriculum reaching 100,000+ girls in developing countries, shaped by focus groups in each region." data-carry="Designing tailored products for people with different tools and circumstances."><text x="92" y="216.0" text-anchor="middle"><tspan x="92" dy="0">Launch Girls</tspan></text></g><g class="role" tabindex="0" role="button" data-region="B" data-name="RBC Capital Markets" data-when="Summer 2026" data-tag="Investment banking" data-did="Investment banking intern in the Power, Utilities, and Infrastructure group." data-carry="The capital and power constraints behind AI&#x27;s infrastructure buildout."><text x="510" y="148" text-anchor="middle"><tspan x="510" dy="0">RBC Capital</tspan><tspan x="510" dy="18">Markets</tspan></text></g><g class="role" tabindex="0" role="button" data-region="C" data-name="Snorkel AI" data-when="Fall 2023" data-tag="AI startup" data-did="Delivered competitor analyses and a ranked list of 150+ prospective clients for computer vision sales." data-carry="How enterprises evaluate and buy AI."><text x="300" y="517" text-anchor="middle"><tspan x="300" dy="0">Snorkel AI</tspan></text></g><g class="role" tabindex="0" role="button" data-region="AB" data-name="Cornerstone Research" data-when="Winter 2026" data-tag="Economic consulting" data-did="Built 500+ regression models in R and SQL for healthcare antitrust and pharmaceutical litigation." data-carry="Analysis rigorous enough to hold up in front of opposing experts."><text x="300" y="160" text-anchor="middle"><tspan x="300" dy="0">Cornerstone</tspan></text></g><g class="role" tabindex="0" role="button" data-region="AB" data-name="Financial literacy advocacy" data-when="2021–23" data-tag="Education" data-did="Drove the creation of a financial literacy class at Stuyvesant High School, covered by Forbes and NPR." data-carry="Building something new inside an institution and getting it adopted."><text x="300" y="109" text-anchor="middle"><tspan x="300" dy="0">Financial</tspan><tspan x="300" dy="18">literacy</tspan></text></g><g class="role" tabindex="0" role="button" data-region="AC" data-name="The Brookings Institution" data-when="Fall 2026" data-tag="Think tank" data-did="Co-wrote a section with Aaron Klein on AI and financial-system security, and am co-authoring a paper proposing a universal Working Bank Account." data-carry="How policymakers weigh AI&#x27;s risks, and how to write for them."><text x="153" y="310" text-anchor="middle"><tspan x="153" dy="0">Brookings</tspan></text></g><g class="role" tabindex="0" role="button" data-region="AC" data-name="Dartmouth Political Economy Project" data-when="Summer 2025" data-tag="Funded research" data-did="Studied how economic labor models evolve and how AI is changing labor markets." data-carry="A working framework for AI&#x27;s economic transition."><text x="156" y="343" text-anchor="middle"><tspan x="156" dy="0">Political</tspan><tspan x="156" dy="18">Economy</tspan><tspan x="156" dy="18">Project</tspan></text></g><g class="role" tabindex="0" role="button" data-region="BC" data-name="Arc Ventures" data-when="Summer 2024" data-tag="Venture capital" data-did="Researched 60+ portfolio companies and ran diligence on 20+ potential investments." data-carry="Judging which early bets are worth making, and on what evidence."><text x="444" y="355" text-anchor="middle"><tspan x="444" dy="0">Arc</tspan><tspan x="444" dy="18">Ventures</tspan></text></g>
+        </svg>
+      <div class="venn-detail" aria-live="polite">
+        <p class="vd-hint">Tap any role in the diagram</p>
+        <p class="vd-name"></p>
+        <p class="vd-meta"></p>
+        <p class="vd-text"></p>
+        <p class="vd-carry"><b>Relevant experience:</b> <span></span></p>
+      </div>
     </div>
+  </section>
 
-    <ol class="tl" reversed>
-      <li data-s="policy ai"><div class="when">Fall 2026</div><div class="dot"></div><div class="body">
-        <div class="org">The Brookings Institution<span class="tag">Think tank</span></div>
-        <p class="did">Co-wrote a section with Aaron Klein on AI and financial-system security, and am co-authoring a paper proposing a universal Working Bank Account.</p>
-        <p class="carry"><b>For the team:</b> how policymakers weigh AI's risks, and how to write for them.</p></div></li>
-
-      <li data-s="finance"><div class="when">Summer 2026</div><div class="dot"></div><div class="body">
-        <div class="org">RBC Capital Markets<span class="tag">Investment banking</span></div>
-        <p class="did">Investment banking intern in the Power, Utilities, and Infrastructure group.</p>
-        <p class="carry"><b>For the team:</b> the capital and power constraints behind AI's infrastructure buildout.</p></div></li>
-
-      <li data-s="research"><div class="when">Winter 2026</div><div class="dot"></div><div class="body">
-        <div class="org">Cornerstone Research<span class="tag">Economic consulting</span></div>
-        <p class="did">Built 500+ regression models in R and SQL for healthcare antitrust and pharmaceutical litigation.</p>
-        <p class="carry"><b>For the team:</b> analysis rigorous enough to hold up in front of opposing experts.</p></div></li>
-
-      <li data-s="research ai"><div class="when">Summer 2025</div><div class="dot"></div><div class="body">
-        <div class="org">Dartmouth Political Economy Project<span class="tag">Funded research</span></div>
-        <p class="did">Studied how economic labor models evolve and how AI is changing labor markets.</p>
-        <p class="carry"><b>For the team:</b> a working framework for AI's economic transition.</p></div></li>
-
-      <li data-s="policy"><div class="when">Fall 2024</div><div class="dot"></div><div class="body">
-        <div class="org">NYC Housing Preservation and Development<span class="tag">Government</span></div>
-        <p class="did">Designed a lender screening tool for the city's $82M down payment assistance program.</p>
-        <p class="carry"><b>For the team:</b> turning policy into operations inside a public agency.</p></div></li>
-
-      <li data-s="finance"><div class="when">Summer 2024</div><div class="dot"></div><div class="body">
-        <div class="org">Arc Ventures<span class="tag">Venture capital</span></div>
-        <p class="did">Researched 60+ portfolio companies and ran diligence on 20+ potential investments.</p>
-        <p class="carry"><b>For the team:</b> judging which early bets are worth making, and on what evidence.</p></div></li>
-
-      <li data-s="education"><div class="when">Summer 2024</div><div class="dot"></div><div class="body">
-        <div class="org">Launch Girls<span class="tag">Nonprofit</span></div>
-        <p class="did">Designed a financial literacy curriculum reaching 100,000+ girls in developing countries, shaped by focus groups in each region.</p>
-        <p class="carry"><b>For the team:</b> designing programs for people in very different places and circumstances.</p></div></li>
-
-      <li data-s="research education"><div class="when">2024–25</div><div class="dot"></div><div class="body">
-        <div class="org">Dartmouth Economics Department<span class="tag">Academic research</span></div>
-        <p class="did">Analyzed global child labor data in Stata for Professor Eric Edmonds and synthesized findings across 2,000+ studies.</p>
-        <p class="carry"><b>For the team:</b> evidence on how education policy changes outcomes for kids.</p></div></li>
-
-      <li data-s="ai"><div class="when">Fall 2023</div><div class="dot"></div><div class="body">
-        <div class="org">Snorkel AI<span class="tag">AI startup</span></div>
-        <p class="did">Delivered competitor analyses and a ranked list of 150+ prospective clients for computer vision sales.</p>
-        <p class="carry"><b>For the team:</b> how enterprises evaluate and buy AI.</p></div></li>
-
-      <li data-s="education"><div class="when">2021–23</div><div class="dot"></div><div class="body">
-        <div class="org">Financial literacy advocacy<span class="tag">Education</span></div>
-        <p class="did">Drove the creation of a financial literacy class at Stuyvesant High School, covered by Forbes and NPR.</p>
-        <p class="carry"><b>For the team:</b> building something new inside an institution and getting it adopted.</p></div></li>
-    </ol>
+  <section class="reason" aria-labelledby="r3-h">
+    <div class="reason-head"><span class="reason-num">3</span><h2 id="r3-h">I'm already working on your team's questions</h2></div>
+    <div class="letter"><p>I write regularly about AI's economic effects, on my Substack, <a href="https://anishasinghal.substack.com/" target="_blank" rel="noopener"><strong>Inspired by Economics</strong></a>, and at <strong>Brookings</strong>. A few pieces:</p></div>
+    <div class="pieces"><div class="piece" role="button" tabindex="0" onclick="showPage('essay3')">
+          <span class="piece-kicker">Substack</span><span class="piece-pull">$2.4T</span><span class="piece-sub">in off-balance-sheet AI commitments, against $0.6T on the books</span><span class="piece-title">Sparknotes Version of Financing AI</span></div><div class="piece" role="button" tabindex="0" onclick="showPage('brookings')">
+          <span class="piece-kicker">Brookings</span><span class="piece-pull">“Who is watching the watchers?”</span><span class="piece-sub">on securing the financial system against AI</span><span class="piece-title">The Financial System Needs to Be One Step Ahead on AI</span></div><div class="piece" role="button" tabindex="0" onclick="showPage('essay2')">
+          <span class="piece-kicker">Substack</span><span class="piece-pull">30 → 5 years</span><span class="piece-sub">the shrinking half-life of a professional skill</span><span class="piece-title">Working for a Product, Not a Role</span></div><div class="piece" role="button" tabindex="0" onclick="showPage('essay1')">
+          <span class="piece-kicker">Substack</span><span class="piece-pull">“What comes after services?”</span><span class="piece-sub">how labor models break when technology replaces workers</span><span class="piece-title">The Economic Models Will Break (Again)</span></div><div class="piece" role="button" tabindex="0" onclick="showPage('research')">
+          <span class="piece-kicker">Research</span><span class="piece-pull">Complement or substitute?</span><span class="piece-sub">a review of the academic debate on AI and labor</span><span class="piece-title">AI and Labor Research</span></div><div class="piece" role="button" tabindex="0" onclick="showPage('notes')">
+          <span class="piece-kicker">Notes</span><span class="piece-pull">“We can't see its brain.”</span><span class="piece-sub">Harry Potter, shell companies, and AI alignment</span><span class="piece-title">Short Notes on AI</span></div></div>
   </section>
 
   <section class="closing" aria-labelledby="close-h">
-    <h2 id="close-h">The questions I want to help answer</h2>
-    <p>After Neerav's talk, I asked him about his view that education's mission is to make students good people and to prepare them for their careers, and that in the age of AI the former will become more important. I am writing a Substack piece on what I observe as a pattern in how we are raised: as children, we are taught to be good and smart, but as adults, we relearn that the capitalist system rewards being smart more and being good can get in the way. When I asked Neerav why he thinks the emphasis on being good will grow, we had a thoughtful exchange about the comparative advantage of good governance, derived from good virtue, in a world of AI agents. Questions about what AI will reward in people, and what it will ask of the generation growing up alongside it, are what I spend a lot of my time thinking about. I would be grateful for the chance to work on them at Anthropic, where the answers will help shape the future.</p>
-    <p>I would love to talk about how I may be able to contribute to the team.</p>
+    <h2 id="close-h" class="visually-hidden">Closing</h2>
+    <p>I graduate from Dartmouth in June 2027. <strong>Will you hire me to join Strategic Initiatives?</strong> I would love to talk about what that could look like.</p>
     <p class="sign">Warm regards,<br>Anisha Singhal</p>
-
-    <nav class="work" aria-label="My work">
-      <span>Read my work</span>
-      <a href="#research" onclick="showPage('research');return false;">AI and labor literature review</a>
-      <a href="#essay1" onclick="showPage('essay1');return false;">How economic models break</a>
-      <a href="#essay2" onclick="showPage('essay2');return false;">Working for a product, not a role</a>
-      <a href="#essay3" onclick="showPage('essay3');return false;">How the AI buildout is financed</a>
-      <a href="#brookings" onclick="showPage('brookings');return false;">AI and financial regulation at Brookings</a>
-    </nav>
   </section>
 </div>
 
@@ -949,6 +975,21 @@
       li.classList.toggle('hit', f !== 'all' && match);
     });
   }));
+
+  const vd=document.querySelector('#home .venn-detail');
+  const pickRole=r=>{
+    document.querySelectorAll('#home .role').forEach(x=>x.classList.toggle('on',x===r));
+    vd.querySelector('.vd-name').textContent=r.dataset.name;
+    vd.querySelector('.vd-meta').textContent=r.dataset.when+', '+r.dataset.tag.toLowerCase();
+    vd.querySelector('.vd-text').textContent=r.dataset.did;
+    vd.querySelector('.vd-carry span').textContent=r.dataset.carry;
+  };
+  document.querySelectorAll('#home .role').forEach(r=>{
+    r.addEventListener('click',()=>pickRole(r)); r.addEventListener('mouseenter',()=>pickRole(r));
+    r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pickRole(r);}});
+  });
+  const firstRole=document.querySelector('#home .role[data-name="The Brookings Institution"]'); if(firstRole) pickRole(firstRole);
+  document.querySelectorAll('#home .piece').forEach(c=>c.addEventListener('keydown',e=>{if(e.key==='Enter')c.click();}));
 </script>
 
 </body>
